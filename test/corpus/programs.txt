@@ -1,0 +1,47 @@
+============================================
+Simple Program
+============================================
+
+$MODULE Foo;
+
+/** Comment 1 **/
+Bar {
+  // Comment 2
+  ($s.1 $s.2 'id') ($s.1 $s.2 'id') = ($s.1 $s.2 'id') ($s.1 $s.2 'id');
+  $e.1 = <Bar $e.1>;
+}
+---
+
+(source_file
+ (module (id))
+ (comment)
+ (function
+  (id)
+  (comment)
+  (sentence
+   (str_br_l)
+   (s_var)
+   (s_var)
+   (q_symbol)
+   (str_br_r)
+   (str_br_l)
+   (s_var)
+   (s_var)
+   (q_symbol)
+   (str_br_r)
+   (str_br_l)
+   (s_var)
+   (s_var)
+   (q_symbol)
+   (str_br_r)
+   (str_br_l)
+   (s_var)
+   (s_var)
+   (q_symbol)
+   (str_br_r))
+  (sentence
+   (e_var)
+   (fun_br_l)
+   (id)
+   (e_var)
+   (fun_br_r))))

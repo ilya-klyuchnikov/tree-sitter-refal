@@ -1,0 +1,212 @@
+[
+  {
+    "type": "function",
+    "named": true,
+    "fields": {
+      "name": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "id",
+            "named": true
+          }
+        ]
+      },
+      "sentence": {
+        "multiple": true,
+        "required": true,
+        "types": [
+          {
+            "type": "sentence",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "module",
+    "named": true,
+    "fields": {
+      "name": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "id",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "sentence",
+    "named": true,
+    "fields": {
+      "pattern": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "e_var",
+            "named": true
+          },
+          {
+            "type": "id",
+            "named": true
+          },
+          {
+            "type": "q_symbol",
+            "named": true
+          },
+          {
+            "type": "s_var",
+            "named": true
+          },
+          {
+            "type": "str_br_l",
+            "named": true
+          },
+          {
+            "type": "str_br_r",
+            "named": true
+          },
+          {
+            "type": "t_var",
+            "named": true
+          }
+        ]
+      },
+      "rewrite": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "e_var",
+            "named": true
+          },
+          {
+            "type": "fun_br_l",
+            "named": true
+          },
+          {
+            "type": "fun_br_r",
+            "named": true
+          },
+          {
+            "type": "id",
+            "named": true
+          },
+          {
+            "type": "q_symbol",
+            "named": true
+          },
+          {
+            "type": "s_var",
+            "named": true
+          },
+          {
+            "type": "str_br_l",
+            "named": true
+          },
+          {
+            "type": "str_br_r",
+            "named": true
+          },
+          {
+            "type": "t_var",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "source_file",
+    "named": true,
+    "fields": {
+      "function": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "function",
+            "named": true
+          }
+        ]
+      },
+      "module": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "module",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "$MODULE",
+    "named": false
+  },
+  {
+    "type": ";",
+    "named": false
+  },
+  {
+    "type": "=",
+    "named": false
+  },
+  {
+    "type": "comment",
+    "named": true
+  },
+  {
+    "type": "e_var",
+    "named": true
+  },
+  {
+    "type": "fun_br_l",
+    "named": true
+  },
+  {
+    "type": "fun_br_r",
+    "named": true
+  },
+  {
+    "type": "id",
+    "named": true
+  },
+  {
+    "type": "q_symbol",
+    "named": true
+  },
+  {
+    "type": "s_var",
+    "named": true
+  },
+  {
+    "type": "str_br_l",
+    "named": true
+  },
+  {
+    "type": "str_br_r",
+    "named": true
+  },
+  {
+    "type": "t_var",
+    "named": true
+  },
+  {
+    "type": "{",
+    "named": false
+  },
+  {
+    "type": "}",
+    "named": false
+  }
+]
