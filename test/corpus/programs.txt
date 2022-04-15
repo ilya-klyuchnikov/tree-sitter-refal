@@ -10,6 +10,11 @@ Bar {
   ($s.1 $s.2 'id') ($s.1 $s.2 'id') = ($s.1 $s.2 'id') ($s.1 $s.2 'id');
   $e.1 = <Bar $e.1>;
 }
+
+Foo {
+  $e.1 $e.2, <Test1 $e.1>: True = $e.2;
+  $e.1 $e.2, <Test1 $e.1>: True, <Test2 $e.2>: True = $e.2 $e.1;
+}
 ---
 
 (source_file
@@ -44,4 +49,33 @@ Bar {
    (fun_br_l)
    (id)
    (e_var)
-   (fun_br_r))))
+   (fun_br_r)))
+ (function
+  (id)
+  (sentence
+   (e_var)
+   (e_var)
+   (condition
+    (fun_br_l)
+    (id)
+    (e_var)
+    (fun_br_r)
+    (id))
+   (e_var))
+  (sentence
+   (e_var)
+   (e_var)
+   (condition
+    (fun_br_l)
+    (id)
+    (e_var)
+    (fun_br_r)
+    (id))
+   (condition
+    (fun_br_l)
+    (id)
+    (e_var)
+    (fun_br_r)
+    (id))
+   (e_var)
+   (e_var))))

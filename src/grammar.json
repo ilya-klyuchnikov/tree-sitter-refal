@@ -93,6 +93,17 @@
           }
         },
         {
+          "type": "FIELD",
+          "name": "conditions",
+          "content": {
+            "type": "REPEAT",
+            "content": {
+              "type": "SYMBOL",
+              "name": "condition"
+            }
+          }
+        },
+        {
           "type": "STRING",
           "value": "="
         },
@@ -103,13 +114,48 @@
             "type": "REPEAT",
             "content": {
               "type": "SYMBOL",
-              "name": "_rewrite_obj"
+              "name": "_obj"
             }
           }
         },
         {
           "type": "STRING",
           "value": ";"
+        }
+      ]
+    },
+    "condition": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": ","
+        },
+        {
+          "type": "FIELD",
+          "name": "test",
+          "content": {
+            "type": "REPEAT",
+            "content": {
+              "type": "SYMBOL",
+              "name": "_obj"
+            }
+          }
+        },
+        {
+          "type": "STRING",
+          "value": ":"
+        },
+        {
+          "type": "FIELD",
+          "name": "pattern",
+          "content": {
+            "type": "REPEAT",
+            "content": {
+              "type": "SYMBOL",
+              "name": "_pattern_obj"
+            }
+          }
         }
       ]
     },
@@ -158,7 +204,7 @@
         }
       ]
     },
-    "_rewrite_obj": {
+    "_obj": {
       "type": "CHOICE",
       "members": [
         {
@@ -179,15 +225,15 @@
         },
         {
           "type": "SYMBOL",
-          "name": "_rewrite_obj_br"
+          "name": "_obj_br"
         },
         {
           "type": "SYMBOL",
-          "name": "_rewrite_obj_fn"
+          "name": "_obj_fn"
         }
       ]
     },
-    "_rewrite_obj_br": {
+    "_obj_br": {
       "type": "SEQ",
       "members": [
         {
@@ -198,7 +244,7 @@
           "type": "REPEAT",
           "content": {
             "type": "SYMBOL",
-            "name": "_rewrite_obj"
+            "name": "_obj"
           }
         },
         {
@@ -207,7 +253,7 @@
         }
       ]
     },
-    "_rewrite_obj_fn": {
+    "_obj_fn": {
       "type": "SEQ",
       "members": [
         {
@@ -222,7 +268,7 @@
           "type": "REPEAT",
           "content": {
             "type": "SYMBOL",
-            "name": "_rewrite_obj"
+            "name": "_obj"
           }
         },
         {

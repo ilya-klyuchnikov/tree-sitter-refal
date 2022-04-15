@@ -27,9 +27,17 @@ module.exports = grammar({
 
         sentence: $ => seq(
             field('pattern', repeat($._pattern_obj)),
+            field('conditions', repeat($.condition)),
             '=',
-            field('rewrite', repeat($._rewrite_obj)),
+            field('rewrite', repeat($._obj)),
             ';',
+        ),
+
+        condition: $ => seq(
+            ',',
+            field('test', repeat($._obj)),
+            ':',
+            field('pattern', repeat($._pattern_obj)),
         ),
 
         _pattern_obj: $ => choice(
@@ -46,23 +54,23 @@ module.exports = grammar({
             $.str_br_r,
         ),
 
-        _rewrite_obj: $ => choice(
+        _obj: $ => choice(
             $.e_var,
             $.s_var,
             $.t_var,
             $._symbol,
-            $._rewrite_obj_br,
-            $._rewrite_obj_fn,
+            $._obj_br,
+            $._obj_fn,
         ),
-        _rewrite_obj_br: $ => seq(
+        _obj_br: $ => seq(
             $.str_br_l,
-            repeat($._rewrite_obj),
+            repeat($._obj),
             $.str_br_r,
         ),
-        _rewrite_obj_fn: $ => seq(
+        _obj_fn: $ => seq(
             $.fun_br_l,
             $._symbol,
-            repeat($._rewrite_obj),
+            repeat($._obj),
             $.fun_br_r,
         ),
 

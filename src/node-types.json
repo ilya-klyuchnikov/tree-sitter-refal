@@ -1,5 +1,87 @@
 [
   {
+    "type": "condition",
+    "named": true,
+    "fields": {
+      "pattern": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "e_var",
+            "named": true
+          },
+          {
+            "type": "id",
+            "named": true
+          },
+          {
+            "type": "q_symbol",
+            "named": true
+          },
+          {
+            "type": "s_var",
+            "named": true
+          },
+          {
+            "type": "str_br_l",
+            "named": true
+          },
+          {
+            "type": "str_br_r",
+            "named": true
+          },
+          {
+            "type": "t_var",
+            "named": true
+          }
+        ]
+      },
+      "test": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "e_var",
+            "named": true
+          },
+          {
+            "type": "fun_br_l",
+            "named": true
+          },
+          {
+            "type": "fun_br_r",
+            "named": true
+          },
+          {
+            "type": "id",
+            "named": true
+          },
+          {
+            "type": "q_symbol",
+            "named": true
+          },
+          {
+            "type": "s_var",
+            "named": true
+          },
+          {
+            "type": "str_br_l",
+            "named": true
+          },
+          {
+            "type": "str_br_r",
+            "named": true
+          },
+          {
+            "type": "t_var",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
     "type": "function",
     "named": true,
     "fields": {
@@ -45,6 +127,16 @@
     "type": "sentence",
     "named": true,
     "fields": {
+      "conditions": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "condition",
+            "named": true
+          }
+        ]
+      },
       "pattern": {
         "multiple": true,
         "required": false,
@@ -151,6 +243,14 @@
   },
   {
     "type": "$MODULE",
+    "named": false
+  },
+  {
+    "type": ",",
+    "named": false
+  },
+  {
+    "type": ":",
     "named": false
   },
   {
