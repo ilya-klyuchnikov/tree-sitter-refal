@@ -28,6 +28,14 @@
     }
   },
   "bindings": {
-    "rust": true
+    "rust": true,
+    "c": false,
+    "go": false,
+    "java": false,
+    "kotlin": false,
+    "node": false,
+    "python": false,
+    "swift": false,
+    "zig": false
   }
 }
