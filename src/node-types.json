@@ -218,6 +218,7 @@
   {
     "type": "source_file",
     "named": true,
+    "root": true,
     "fields": {
       "function": {
         "multiple": true,
@@ -263,7 +264,8 @@
   },
   {
     "type": "comment",
-    "named": true
+    "named": true,
+    "extra": true
   },
   {
     "type": "e_var",
