@@ -1,0 +1,39 @@
+{
+  "$schema": "https://tree-sitter.github.io/tree-sitter/assets/schemas/config.schema.json",
+  "grammars": [
+    {
+      "name": "refal",
+      "camelcase": "Refal",
+      "title": "Refal",
+      "scope": "source.refal",
+      "file-types": [
+        "refal"
+      ],
+      "injection-regex": "^refal$",
+      "class-name": "TreeSitterRefal"
+    }
+  ],
+  "metadata": {
+    "version": "0.2.0",
+    "license": "MIT",
+    "description": "Refal grammar for tree-sitter",
+    "authors": [
+      {
+        "name": "Ilya Klyuchnikov",
+        "email": "ilya.klyuchnikov@gmail.com"
+      }
+    ],
+    "links": {
+      "repository": "https://github.com/ilya-klyuchnikov/tree-sitter-refal"
+    }
+  },
+  "bindings": {
+    "c": true,
+    "go": false,
+    "node": false,
+    "python": false,
+    "rust": true,
+    "swift": false,
+    "zig": false
+  }
+}
